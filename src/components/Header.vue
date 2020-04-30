@@ -36,14 +36,14 @@
 
         <div id="accordion">
 
-  <div class="card" style="border:none; border-radius: 0px;">
+  <div id="card" class="card" style="border:none; border-radius: 0px;">
     <div class="card-header" style="background-color: rgb(208, 255, 154);border:none;text-align: left;">
       <a class="card-link" data-toggle="collapse" href="#collapseOne" style="font-size: 19px; font-weight: bold;color:rgb(17, 11, 9)">
-        About Me <span class='icon'></span>
+        About Me <a v-on:click="rotateSpan"><span id="down" class='icon'></span></a>
       </a>
     </div>
     <div id="collapseOne" class="collapse" data-parent="#accordion" >
-      <div class="card-body" style="text-align : left; line-height: 27px; height: 260px;">
+      <div id="card-body" class="card-body" style="text-align : left; line-height: 27px; height: 260px;">
         I am Shreesha Sagar, currently pursuing 6th semester B.E. in Information Science and Engineering at RV College of Engineering, Bangalore. Fast and Efficient learner. Looking out for the next big thing.<br>
        <button type="button" class="btn btn-success" style="margin-top:15px; margin-left: -2px; margin-bottom: 10px;font-weight: bold;">View Portfolio</button>
       </div>
@@ -56,11 +56,28 @@
 
 <script>
 export default {
-    name: 'headers'
+    methods:{
+        rotateSpan: function(){
+            this.$angle += 180; 
+            console.log(this.$angle);
+            var img = document.getElementById("down");
+            img.style.transform="rotate("+this.$angle+"deg)";
+        }
+    }
 }
 </script>
 
 <style>
+.rotated-image {
+    background: url('../assets/dd.svg');
+    height: 27px;
+    width: 27px;
+    display: block;
+    float: right;
+    background-position: right center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .icon {
     background: url('../assets/dd.svg');
     height: 27px;
@@ -94,16 +111,15 @@ export default {
     margin-top: 72px;
     display: none;
 }
-.card{
+#card{
     background-color: rgb(208, 255, 154);
     background-image: url(../assets/ss.svg);
     background-repeat: no-repeat;
     background-size: 55%;
     background-position:bottom right;
     background-position-x: 210px;
-
 }
-.card-body{
+#card-body{
     padding: 0px 0px 10px 20px !important;  
     width: 90%; 
 }

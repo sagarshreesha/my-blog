@@ -1,16 +1,19 @@
 <template>
   <div class="container" id="app">
     <Header/>
+    <Posts style="padding: 20px;" />
   </div>
 </template>
 
 <script>
 import Header from './components/Header';
+import Posts from './components/Posts';
 
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    Posts
   }
 }
 </script>
