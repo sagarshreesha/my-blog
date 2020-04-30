@@ -26,8 +26,7 @@
         <div class="jumbotron jumbotron-fluid" style="width:100%;">
             <div id="about" class="container" style="">
                 <h2 style="font-weight: bold; font-size : 40px;" class="display-4">About Me</h2>
-                <p class="lead" style="width:65%; text-align: justify;line-height: 35px;">I am Shreesha Sagar, currently pursuing 6th semester B.E. in Information Science and Engineering at RV College of Engineering, Bangalore. Fast and Efficient learner. Looking out for the next big thing. Sharing my experiences of development on this blog site.</p>
-                <p id="diss" class="lead" style="width:65%; text-align: justify;line-height: 35px;">I am Shreesha Sagar, currently pursuing 6th semester B.E. in Information Science and Engineering at RV College of Engineering, Bangalore. Fast and Efficient learner. Looking out for the next big thing. Sharing my experiences of development on this blog site.</p>
+                <p class="lead" style="width:70%; text-align: justify;line-height: 38px;">I am Shreesha Sagar, currently pursuing 6th semester B.E. in Information Science and Engineering at RV College of Engineering, Bangalore. Fast and Efficient learner. Looking out for the next big thing. Sharing my experiences of development on this blog site.</p>
                 <button type="button" class="btn btn-success">View Portfolio</button>
             </div>
         </div>
@@ -37,15 +36,16 @@
 
         <div id="accordion">
 
-  <div class="card">
-    <div class="card-header">
-      <a class="card-link" data-toggle="collapse" href="#collapseOne">
-        Collapsible Group Item #1
+  <div class="card" style="border:none; border-radius: 0px;">
+    <div class="card-header" style="background-color: rgb(208, 255, 154);border:none;text-align: left;">
+      <a class="card-link" data-toggle="collapse" href="#collapseOne" style="font-size: 19px; font-weight: bold;color:rgb(17, 11, 9)">
+        About Me <span class='icon'></span>
       </a>
     </div>
-    <div id="collapseOne" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Lorem ipsum..
+    <div id="collapseOne" class="collapse" data-parent="#accordion" >
+      <div class="card-body" style="text-align : left; line-height: 27px; height: 260px;">
+        I am Shreesha Sagar, currently pursuing 6th semester B.E. in Information Science and Engineering at RV College of Engineering, Bangalore. Fast and Efficient learner. Looking out for the next big thing.<br>
+       <button type="button" class="btn btn-success" style="margin-top:15px; margin-left: -2px; margin-bottom: 10px;font-weight: bold;">View Portfolio</button>
       </div>
     </div>
   </div>
@@ -61,6 +61,15 @@ export default {
 </script>
 
 <style>
+.icon {
+    background: url('../assets/dd.svg');
+    height: 27px;
+    width: 27px;
+    display: block;
+    float: right;
+    background-position: right center;
+    /* Other styles here */
+}
 .jumbotron{
     margin: 70px 0px 0px 0px;
     background-color: rgb(208, 255, 154);
@@ -83,9 +92,25 @@ export default {
 }
 #accordion{
     margin-top: 72px;
-    border-radius: 0px !important  ;
+    display: none;
+}
+.card{
+    background-color: rgb(208, 255, 154);
+    background-image: url(../assets/ss.svg);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position:bottom right;
+    background-position-x: 210px;
+
+}
+.card-body{
+    padding: 0px 0px 10px 20px !important;  
+    width: 90%; 
 }
 @media (max-width: 550px){
+    #accordion{
+        display: block;
+    }
     .jumbotron{
         background-size: 250px;
         background-image: none;
