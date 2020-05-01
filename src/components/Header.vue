@@ -36,22 +36,25 @@
 
         <div id="accordion">
 
-  <div id="card" class="card" style="border:none; border-radius: 0px;">
+  <div  class="card" style="border:none; border-radius: 0px;">
     <div class="card-header" style="background-color: rgb(208, 255, 154);border:none;text-align: left;">
       <a class="card-link" data-toggle="collapse" href="#collapseOne" style="font-size: 19px; font-weight: bold;color:rgb(17, 11, 9)">
         About Me <a v-on:click="rotateSpan"><span id="down" class='icon'></span></a>
       </a>
     </div>
+    <div id="card">
     <div id="collapseOne" class="collapse" data-parent="#accordion" >
       <div id="card-body" class="card-body" style="text-align : left; line-height: 27px; height: 260px;">
         I am Shreesha Sagar, currently pursuing 6th semester B.E. in Information Science and Engineering at RV College of Engineering, Bangalore. Fast and Efficient learner. Looking out for the next big thing.<br>
        <button type="button" class="btn btn-success" style="margin-top:15px; margin-left: -2px; margin-bottom: 10px;font-weight: bold;">View Portfolio</button>
       </div>
     </div>
+      </div>
   </div>
         </div>
     </header> 
 </template>
+<script src="node_modules/colorthief/dist/color-thief.umd.js"></script>
 
 
 <script>
@@ -63,21 +66,11 @@ export default {
             var img = document.getElementById("down");
             img.style.transform="rotate("+this.$angle+"deg)";
         }
-    }
+}
 }
 </script>
 
 <style>
-.rotated-image {
-    background: url('../assets/dd.svg');
-    height: 27px;
-    width: 27px;
-    display: block;
-    float: right;
-    background-position: right center;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
 .icon {
     background: url('../assets/dd.svg');
     height: 27px;
@@ -119,6 +112,7 @@ export default {
     background-position:bottom right;
     background-position-x: 210px;
 }
+
 #card-body{
     padding: 0px 0px 10px 20px !important;  
     width: 90%; 

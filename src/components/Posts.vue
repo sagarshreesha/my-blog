@@ -5,7 +5,7 @@
         </div></center>
         <center><div class="card-columns" style="width: 80%; text-align : left">
   <div class="card">
-    <img src="https://qvault.io/wp-content/uploads/2019/09/1_QIg6vEjZmT5YMVKU5Rxr2A-1024x576.png" class="card-img-top" alt="..." style="">
+    <img ref="img" src="https://qvault.io/wp-content/uploads/2019/09/1_QIg6vEjZmT5YMVKU5Rxr2A-1024x576.png" class="card-img-top" alt="..." style="">
     <div class="card-body">
       <h5 class="card-title">Vue.js, A breath of fresh air!</h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -72,6 +72,7 @@
 
 
 <script>
+
 export default {
     name: 'posts'
 }
